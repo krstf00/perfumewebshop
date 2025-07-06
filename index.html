@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PerfumeWebshop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .product {
+      max-width: 600px;
+      background: white;
+      margin: 40px auto;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .product img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .product h2 {
+      margin-top: 20px;
+    }
+    .product p {
+      font-size: 16px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #28a745;
+    }
+    .ecwid-button {
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PerfumeWebshop</h1>
+  </header>
+
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1611171711910-2c06aa93a0c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Jean Paul Gaultier" />
+    <h2>Jean Paul Gaultier - másolat (124ml)</h2>
+    <p>Prémium minőségű másolat a híres Jean Paul Gaultier férfi parfümről. Tartós illat, elegáns megjelenés, elérhető áron.</p>
+    <div class="price">29.99 €</div>
+    <div class="ecwid-button">
+      <!-- Ecwid Buy Button (Demo) -->
+      <div id="my-store-12345678"></div>
+      <div class="ecwid-product-browser" data-store-id="12345678" data-layout="BUY_BUTTON" data-id="1001"></div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 PerfumeWebshop. Minden jog fenntartva.
+  </footer>
+
+  <!-- Ecwid script load with init after ready -->
+  <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?12345678&data_platform=code&data_date=2025-07-06" charset="utf-8"></script>
+  <script>
+    window.addEventListener('load', function () {
+      if (typeof Ecwid !== 'undefined') {
+        Ecwid.init();
+      } else {
+        const scriptCheck = setInterval(function () {
+          if (typeof Ecwid !== 'undefined') {
+            clearInterval(scriptCheck);
+            Ecwid.init();
+          }
+        }, 100);
+      }
+    });
+  </script>
+</body>
+</html>
